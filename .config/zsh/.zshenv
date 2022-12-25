@@ -26,7 +26,7 @@ path=(
 export PATH
 
 export SHELL="/usr/bin/zsh"
-export EDITOR="/usr/local/bin/nvim"
+export EDITOR="/usr/bin/nvim"
 export VISUAL="$EDITOR"
 export BROWSER="/usr/bin/firefox"
 

@@ -1,0 +1,9 @@
+[user]
+  name = Leeqiqo
+  email = s1cho@proton.me
+[core]
+  excludesfile = ~/.config/git/gitignore_global
+[init]
+  defaultBranch = main
+[color]
+  ui = auto

@@ -21,8 +21,8 @@ bspc config focus_follows_pointer	true
 bspc config remove_disabled_monitors	true
 bspc config remove_unplugged_monitors	true
 
-bspc rule -a firefox desktop='^2' follow='on'
-bspc rule -a discord desktop='^3' follow='on'
+bspc rule -a firefox desktop='^3' follow='on'
+bspc rule -a discord desktop='^4' follow='on'
 
 picom -b &
 

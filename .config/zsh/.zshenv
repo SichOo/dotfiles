@@ -21,6 +21,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 typeset -U path PATH
 path=(
 	$HOME/.local/bin 
+  $HOME/.local/share/npm-globals/bin
 	$path
 )
 export PATH

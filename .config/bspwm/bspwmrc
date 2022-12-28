@@ -21,13 +21,17 @@ bspc config focus_follows_pointer	true
 bspc config remove_disabled_monitors	true
 bspc config remove_unplugged_monitors	true
 
+bspc rule -a alacritty desktop='^1' follow='on'
+bspc rule -a discord desktop='^2' follow='on'
+bspc rule -a telegram-desktop desktop='^2' follow='on'
 bspc rule -a firefox desktop='^3' follow='on'
-bspc rule -a discord desktop='^4' follow='on'
 
 picom -b &
 
 xrdb -merge $HOME/.Xresources &
+
 hsetroot -cover $HOME/Pictures/Wallpapers/Img03.jpg &
 xsetroot -cursor_name left_ptr &
+
 $HOME/.config/polybar/launch.sh &
 

@@ -1,5 +1,5 @@
-#include	"$HOME/.config/Xresources.d/rosepine"
-#include	"$HOME/.config/Xresources.d/xft"
+#include	".config/Xresources.d/rosepine"
+#include	".config/Xresources.d/xft"
 
 !! URxvt Appearance
 URxvt.font: xft:Iosevka Nerd Font Mono:pixelsize=12

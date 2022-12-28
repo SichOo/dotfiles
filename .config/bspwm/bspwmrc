@@ -1,5 +1,4 @@
 #! /bin/sh
-
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d 1 2 3 4 5 6 7 8
@@ -32,6 +31,5 @@ xrdb -merge $HOME/.Xresources &
 
 hsetroot -cover $HOME/Pictures/Wallpapers/Img03.jpg &
 xsetroot -cursor_name left_ptr &
-
+mpd &
 $HOME/.config/polybar/launch.sh &
-

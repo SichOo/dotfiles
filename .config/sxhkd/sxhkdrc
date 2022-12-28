@@ -1,6 +1,6 @@
 # terminal emulator
 super + {_,shift +}Return
-	{urxvt, bspc rule -a \* -o state=floating && urxvt}
+	{alacritty, bspc rule -a \* -o state=floating && alacritty}
 
 # program launcher
 super + @space

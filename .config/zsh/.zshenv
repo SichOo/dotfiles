@@ -26,6 +26,7 @@ path=(
 )
 export PATH
 
+export TERMINAL="/usr/bin/alacritty"
 export SHELL="/usr/bin/zsh"
 export EDITOR="/usr/bin/nvim"
 export VISUAL="$EDITOR"

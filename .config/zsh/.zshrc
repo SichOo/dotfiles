@@ -28,6 +28,13 @@ setopt correct
 zstyle ":completion:*" menu select
 zstyle ":completion:complete:*" gain-privileges 1
 
+ncmpcppShow() {
+  BUFFER="ncmpcpp"
+  zle accept-line
+}
+zle -N ncmpcppShow
+bindkey '^[\' ncmpcppShow
+
 for ZSH_FILE in "${ZDOTDIR:-$HOME}"/zsh.d/*.zsh(N); do
 	source "${ZSH_FILE}"
 done

@@ -1,2 +1,12 @@
-Xft.dpi: 89
-Xft.antialias: true
+!! xft settings
+Xft.autohint:false
+Xft.lcdfilter:lcddefault
+Xft.hintstyle:hintfull
+Xft.hinting:true
+Xft.antialias:true
+Xft.dpi:89
+Xft.rgba:rgb
+
+! X Cursor theme
+Xcursor.theme: Future Cursors
+Xcursor.size:  16

@@ -4,9 +4,9 @@ killall polybar
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # Launch polybar
+polybar xwindow -c $HOME/.config/polybar/config.ini &
 polybar filesystem -c $HOME/.config/polybar/config.ini &
 polybar memory -c $HOME/.config/polybar/config.ini &
-polybar cpu -c $HOME/.config/polybar/config.ini &
 
 polybar bspwm -c $HOME/.config/polybar/config.ini &
 

@@ -18,14 +18,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-typeset -U path PATH
-path=(
-	$HOME/.local/bin 
-  $HOME/.local/share/npm-globals/bin
-	$path
-)
-export PATH
-
 export TERMINAL="/usr/bin/alacritty"
 export SHELL="/usr/bin/zsh"
 export EDITOR="/usr/bin/nvim"

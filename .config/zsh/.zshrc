@@ -1,8 +1,7 @@
-autoload -U compaudit compinit promptinit
+autoload -U compaudit compinit
 compinit
-promptinit
 
-prompt redhat
+eval "$(starship init zsh)"
 
 HISTFILE="${XDG_CACHE_HOME}/zsh/zhistory"
 HISTSIZE=100000

@@ -34,6 +34,7 @@ ncmpcppShow() {
 zle -N ncmpcppShow
 bindkey '^[\' ncmpcppShow
 
+. $ZDOTDIR/plugins/plugins.zsh
 for ZSH_FILE in "${ZDOTDIR:-$HOME}"/zsh.d/*.zsh(N); do
 	source "${ZSH_FILE}"
 done

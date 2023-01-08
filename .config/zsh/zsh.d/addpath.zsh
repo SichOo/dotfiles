@@ -1,6 +1,6 @@
 typeset -U path PATH
 path=(
-	$HOME/.local/share/npm-globals
+	$HOME/.local/share/npm-globals/bin
 	$HOME/.local/bin
 	$path
 )

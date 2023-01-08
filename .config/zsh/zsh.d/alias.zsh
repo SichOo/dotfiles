@@ -1,15 +1,12 @@
 unalias which-command
 unalias run-help
+unalias fsh-alias
 
 alias nv="$EDITOR"
 
-alias ls="exa -la --group-directories-first --no-filesize --git"
-alias ld="exa -lD --group-directories-first --no-filesize --git"
+alias ls="exa -la --group-directories-first $LS_OPTIONS"
 
-alias rm="rm -rfv"
-alias mv="mv -v"
-alias cp="cp -rv"
-alias mkdir="mkdir -pv"
+alias cp="cp -i"
 
 # Dotfiles
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
@@ -28,6 +25,7 @@ alias e/zshrc="$EDITOR $ZDOTDIR/.zshrc"
 
 alias "e/alias"="$EDITOR $ZDOTDIR/zsh.d/alias.zsh"
 alias e/linked="$EDITOR $ZDOTDIR/zsh.d/linked.zsh"
+alias e/addpath="$EDITOR $ZDOTDIR/zsh.d/addpath.zsh"
 
 alias e/bspwm="$EDITOR $HOME/.config/bspwm/bspwmrc"
 alias e/sxhkd="$EDITOR $HOME/.config/sxhkd/sxhkdrc"

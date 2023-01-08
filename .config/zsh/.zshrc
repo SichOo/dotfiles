@@ -1,4 +1,4 @@
-autoload -U compaudit compinit
+autoload -Uz compinit
 compinit
 
 eval "$(starship init zsh)"
@@ -26,6 +26,7 @@ setopt correct
 
 zstyle ":completion:*" menu select
 zstyle ":completion:complete:*" gain-privileges 1
+
 
 ncmpcppShow() {
   BUFFER="ncmpcpp"

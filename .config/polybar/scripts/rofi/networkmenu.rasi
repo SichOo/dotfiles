@@ -1,0 +1,63 @@
+@import "colors.rasi"
+
+configuration {
+  font: "JetBrainsMono Nerd Font 8";
+  show-icons: true;
+  icon-theme: "Papirus";
+  display-drun: "直";
+  drun-display-format: "{name}";
+  disable-history: false;
+  fullscreen: false;
+  hide-scrollbar: true;
+  sidebar-mode: false;
+}
+
+window {
+    transparency: "real";
+    background-color: @bg;
+    text-color: @fg;
+    border: 0px 0px 0px 0px;
+    border-color: @ac;
+    border-radius: 0px;
+    anchor:     center;
+    location:   center;
+    width:      400px;
+    padding:    4px;
+}
+
+ textbox-prompt-colon {                                                
+  padding: 6px 7px 4px 7px;
+     text-color: @fg;                                              
+     expand: false;                                                    
+     str: "直";
+     font: "feather 12";
+     margin: 0 0.3em 0em 0em;                                          
+     str: ":";
+ }
+
+
+horibox {
+    orientation: horizontal;
+    children:   [ prompt, textbox-prompt-colon,entry, listview ];
+}
+
+#listview {
+    layout: vertical;
+    spacing:    6px;
+    lines:      8;
+}
+
+#entry {
+    expand:     false;
+    width:      10em;
+}
+
+#element {
+    padding: 0px 2px;
+    color: #676E8D;
+}
+#element selected {
+    color: #f3f4f5;
+
+}
+

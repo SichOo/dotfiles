@@ -1,24 +1,15 @@
 #!/usr/bin/env bash
+
+# Add this script to your wm startup file.
+DIR="$HOME/.config/polybar"
+
 # Terminate already running bar instances
-killall polybar
+killall -q polybar
+
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
-# Launch polybar
-polybar menu -c $HOME/.config/polybar/config.ini &
-polybar xwindow -c $HOME/.config/polybar/config.ini &
-polybar filesystem -c $HOME/.config/polybar/config.ini &
-polybar memory -c $HOME/.config/polybar/config.ini &
 
-polybar bspwm -c $HOME/.config/polybar/config.ini &
-
-polybar backlight -c $HOME/.config/polybar/config.ini &
-polybar pulseaudio -c $HOME/.config/polybar/config.ini &
-polybar network -c $HOME/.config/polybar/config.ini &
-polybar datetime -c $HOME/.config/polybar/config.ini &
-
-polybar downspeed -c $HOME/.config/polybar/config.ini &
-polybar upspeed -c $HOME/.config/polybar/config.ini &
-
-if [[ $(xrandr -q | grep 'HDMI1 connected') ]]; then
-	polybar external -c $(dirname $0)/config.ini &
-fi
+# Launch the bar
+polybar -q left -c "$DIR"/config.ini &
+polybar -q center -c "$DIR"/config.ini &
+polybar -q right -c "$DIR"/config.ini &

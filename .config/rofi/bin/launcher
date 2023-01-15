@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+rofi \
+  -show drun \
+  -modi drun \
+  -no-config \
+  -no-lazy-grab \
+  -theme $HOME/.config/rofi/config/launcher.rasi

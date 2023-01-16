@@ -1,9 +1,9 @@
 configuration {
     show-icons:                     true;
     display-drun: 		              "";
-    icon-theme:                     "Papirus";
+    icon-theme:                     "Qogir";
     drun-display-format:            "{icon} {name}";
-    disable-history:                false;
+    disable-history:                true;
     click-to-exit: 		              true;
     location:                       0;
 }

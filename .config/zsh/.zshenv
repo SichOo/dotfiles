@@ -32,5 +32,5 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 export NPM_CONFIG_CACHE="${XDG_CACHE_HOME}/npm"
 export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
-export NPM_PACKAGES="${XDG_DATA_HOME}/npm-packages"
-export NPM_CONFIG_PREFIX="${XDG_DATA_HOME}/npm-globals"
+export NPM_PACKAGES="${XDG_DATA_HOME}/npmPackages"
+export NPM_CONFIG_PREFIX="${XDG_DATA_HOME}/npmGlobals"

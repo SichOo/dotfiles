@@ -8,7 +8,7 @@ super + @space
 super + r
   $HOME/.config/rofi/bin/runner
 ## -- Screenshot
-super + s
+super + p
   $HOME/.config/rofi/bin/screenshot
 
 ## -- Reload sxhkd

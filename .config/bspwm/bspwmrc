@@ -1,5 +1,5 @@
 #! /bin/sh
-killall -9 sxhkd polybar mpd picom
+pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d 1 2 3 4 5 6
 
@@ -18,22 +18,17 @@ bspc config remove_disabled_monitors    true
 bspc config remove_unplugged_monitors	  true
 bspc config pointer_modifier            mod4
 
-bspc rule -r *:*
+bspc rule -r '*'
 bspc rule -a Alacritty desktop='^1' follow='on'
+bspc rule -a discord desktop='^2' follow='on'
+bspc rule -a TelegramDesktop desktop='^2' follow='on'
 bspc rule -a LibreWolf desktop='^3' follow='on'
+bspc rule -a pyrogenesis desktop='^6' state='fullscreen' follow='on'
 
+bspc rule -a dolphin-emu state='floating'
 bspc rule -a Lxappearance state='floating'
 bspc rule -a Pavucontrol state='floating'
 bspc rule -a Qt5ct state='floating'
 bspc rule -a Nm-connection-editor state='floating'
 
-## -- Autostart
-pgrep -x sxhkd > /dev/null || sxhkd &
-mpd &
-picom &
 $HOME/.config/autostart/launch &
-hsetroot -cover $HOME/Pictures/Img01.png &
-xsetroot -cursor_name left_ptr &
-xrdb -merge ~/.Xresources &
-xset s 0 0
-xset dpms 0 0 0

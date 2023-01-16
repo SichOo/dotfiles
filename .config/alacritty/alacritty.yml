@@ -5,7 +5,7 @@ env:
 
 window:
   dimensions:
-    columns: 108
+    columns: 118
     lines: 28
   #position:
   #  x: 0

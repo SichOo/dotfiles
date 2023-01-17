@@ -1,0 +1,24 @@
+add_newline = false
+command_timeout = 1500
+scan_timeout = 30
+
+[directory]
+truncation_length = 0
+home_symbol = '~'
+read_only = ' [RO]'
+
+[cmd_duration]
+disabled = true
+
+[character]
+success_symbol = '[❯](bold green)'
+error_symbol = '[❯](bold red)'
+vicmd_symbol = '[❮](bold yellow)'
+
+[package]
+disabled = true
+
+[python]
+python_binary = 'python3'
+style = 'green bold'
+symbol = ' '

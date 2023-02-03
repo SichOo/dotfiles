@@ -1,1 +1,0 @@
-/home/sicho/.config/zsh/.zshenv

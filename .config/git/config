@@ -2,7 +2,7 @@
   name = SichOo
   email = s1cho@proton.me
 [core]
-  excludesfile = ~/.config/git/gitignore_global
+  excludesfile = ~/.config/git/gitignore
 [init]
   defaultBranch = main
 [color]

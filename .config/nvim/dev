@@ -1,0 +1,4 @@
+rm -rf \
+  ~/.cache/nvim \
+  ~/.local/share/nvim \
+  ~/.local/state/nvim

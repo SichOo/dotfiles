@@ -1,25 +1,26 @@
-local present, null_ls = pcall(require, "null-ls")
-if not present then
+local nl = vim.F.npcall(require, "null-ls")
+if not nl then
   return
 end
 
-require("mason-null-ls").setup({
+local mason_nl = require("mason-null-ls")
+mason_nl.setup({
   ensure_installed = {
     "stylua",
     "prettier",
-    "markdownlint",
   },
-  automatic_installation = false,
-  automatic_setup = false,
 })
 
-local builtins = null_ls.builtins
-local sources = {
-  builtins.formatting.stylua.with({
-    filetypes = { "lua" },
-    extra_args = { "--config-path", vim.fn.expand("~/.config/stylua/stylua.toml") },
-  }),
-}
+local formatting = nl.builtins.formatting
+local default = function(source_name, methods)
+  require("mason-null-ls.automatic_setup")(source_name, methods)
+end
+mason_nl.setup_handlers({
+  default,
+  stylua = function()
+    nl.register(formatting.stylua)
+  end,
+})
 
 local lsp_formatting = function(bufnr)
   vim.lsp.buf.format({
@@ -48,8 +49,6 @@ local on_attach = function(client, bufnr)
   end
 end
 
-null_ls.setup({
-  debug = true,
-  sources = sources,
+nl.setup({
   on_attach = on_attach,
 })

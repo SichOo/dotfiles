@@ -1,14 +1,29 @@
 return {
   {
-    'nvim-lualine/lualine.nvim',
+    "nvim-lualine/lualine.nvim",
+    dependencies = {
+      { "nvim-tree/nvim-web-devicons" },
+    },
     config = function()
-      require('configs.statusline')
-    end
+      require("sicho.statusline")
+    end,
   },
   {
-    'akinsho/bufferline.nvim',
+    "akinsho/bufferline.nvim",
+    dependencies = {
+      { "nvim-tree/nvim-web-devicons" },
+    },
     config = function()
-      require('configs.bufferline')
-    end
+      require("sicho.bufferline")
+    end,
   },
+
+  -- Misc
+  {
+    "tiagovla/scope.nvim",
+    config = function()
+      require("scope").setup()
+    end,
+  },
+  { "j-hui/fidget.nvim" },
 }

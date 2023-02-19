@@ -4,20 +4,12 @@ if not vim.loop.fs_stat(lazypath) then
     "git",
     "clone",
     "--filter=blob:none",
-    "--single-branch",
     "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
     lazypath,
   })
 end
 vim.opt.rtp:prepend(lazypath)
-require("lazy").setup("plugins", {
-  lockfile = vim.fn.stdpath("data") .. "/lazy/lock.json",
-  change_detection = {
-    enabled = true,
-    notify = false,
-  },
-  ui = {
-    border = "rounded",
-    size = { width = 0.86, height = 0.78 },
-  },
+require('lazy').setup('plugins', {
+	lockfile = vim.fn.stdpath('data') .. '/lazy/lock.json',
 })

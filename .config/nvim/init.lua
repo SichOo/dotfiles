@@ -1,11 +1,11 @@
-local load = function(mod)
-  package.loaded[mod] = nil
-  require(mod)
+local req = function(mod)
+	package.loaded[mod] = nil
+	require(mod)
 end
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = ","
+vim.g.maplocalleader = ','
+vim.g.mapleader = ' '
 
-load("sicho.reload")
-load("sicho.builtins")
-load("sicho.lazy")
+req'sicho.options'
+req'sicho.keymaps'
+req'sicho.packages'

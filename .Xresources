@@ -1,10 +1,4 @@
-Xft.dpi:86
-Xft.autohint:0
-Xft.lcdfilter:lcddefault
-Xft.hinting:1
-Xft.hintstyle:hintslight
-Xft.antialias:1
-Xft.rgba:rgb
+Xft.dpi: 86
 
 *background: #1E1E2E
 *foreground: #CDD6F4
@@ -32,4 +26,3 @@ Xft.rgba:rgb
 ! white
 *color7: #BAC2DE
 *color15: #A6ADC8
-

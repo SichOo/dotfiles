@@ -1,0 +1,6 @@
+Net/ThemeName "ePapirus-Dark"
+Net/IconThemeName "ePapirus-Dark"
+Gtk/CursorThemeName "Qogir-ubuntu-dark"
+
+Net/EnableEventSounds 1
+Net/EnableInputFeedbackSounds 1

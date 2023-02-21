@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-export LIBGL_ALWAYS_SOFTWARE=1
+export LIBGL_ALWAYS_SOFTWARE=0
 export LIBVA_DRIVER_NAME=i965
 
 export LANGUAGE="en_US.UTF-8"
